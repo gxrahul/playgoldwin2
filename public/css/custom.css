@@ -1,0 +1,139 @@
+.navigation td a {
+  font-size: 25px;
+  cursor: default;
+}
+
+.section03 {
+	width: 1140px;
+}
+
+.sub_section02, .sub_section02 .sorted_display, .sub_section02 .sorted_display table.tournament_list, .sub_section02 .sorted_display .pagination {
+	width: 100%;
+}
+
+.section03 .title_section {
+  background: #A10309;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.section03 .title_section h3 {
+  color: #ffffff;
+  font: normal 26px/36px 'Conv_PTsans';
+  padding: 2px 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.table-top .top_list {
+  width: 100%;
+}
+
+.result .table-top .top_list {
+  width: 100%;
+  border-top: 1px solid #e51319;
+  border-left: 1px solid #e51319;
+  border-right: 1px solid #e51319;
+  background-color: #b6873a;
+}
+
+table.top_list thead {
+  text-align: center;
+}
+
+table.top_list tbody {
+  text-align: center;
+}
+
+.top_list tr th, .top_list tr td  {
+  padding: 10px;
+}
+
+.section03 .tournament_list .input-num {
+  width: 38px;
+  height: 25px;
+}
+
+.section03 .Qtytxt {
+  width: 41px;
+  height: 25px;
+}
+
+.section03 .Amnttxt {
+  width: 80px;
+  height: 25px;
+}
+
+.section03 .loginbox {
+	width: 150px;
+	height: 25px;
+}
+
+.sub_section02 .sorted_display table.tournament_list tbody td {
+	border-right: 1px solid #777;
+  border-bottom: 1px solid #777;
+  border-left: 1px solid #777;
+}
+
+input#bt_login {
+  height: 30px; 
+}
+
+a#bt_jodi {
+  background: url(../images/send-btn01.png) 0 0 no-repeat;
+  width: 98px !important;
+  height: 42px;
+  border: none;
+  font: normal 14px/22px 'PT sans';
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.section03.result {
+  margin-top: 52px !important;
+  width: 940px;
+}
+
+.table-top {
+  /*border: 1px solid #222;*/
+  /*background-color: #ccc;*/
+}
+
+.top_list input#datepicker {
+  height: 24px;
+}
+
+.top_list input[type="submit"] {
+  padding: 3px;
+  cursor: pointer;
+}
+
+.sub_section02 .sorted_display table.tournament_list tbody td.lot-name {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+span.ugamename {
+  font-size: 20px;
+  line-height: 28px !important;
+  text-align: center;
+  font-weight: bold;
+}
+
+span.bgamename {
+  font-weight: 600;
+}
+
+.foot-txt {
+  margin-top: 25px;
+  font-size: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+}

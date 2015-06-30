@@ -1,62 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Laravel</title>
-
-	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-
-	<!-- Fonts -->
-	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
-</head>
-<body>
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle Navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Laravel</a>
+<html><!-- Mirrored from docs.prospekt.hr/www_sites/documents/power/ by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 26 Mar 2013 01:06:56 GMT -->
+	<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<title>::POWER JACKPOT::</title>
+	<link href="images/favicon.png" type="image/png" rel="icon">
+	<link type="text/css" rel="stylesheet" href="/css/style.css">
+	<link type="text/css" rel="stylesheet" href="/css/custom.css">
+	<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700">
+	<script src="/js/jquery-1.4.3.min.js" type="text/javascript"></script>
+	<script src="/js/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+	</head>
+	<body>
+	  <!--wrapper -->
+	    <div id="wrapper">
+	    <!--topsection -->
+			<div id="topsection">
+			  <div class="topsection_inner">
+			  <img class="leaf" alt="" src="/images/leaf.png">
+			<!--main_ligo -->
+			    <div class="main_logo"><a href="/"><img alt="" src="/images/power_main_logo.png"></a></div>
+			    <!--main_ligo -->
+			    <!--text01 -->
+			    <div class="text01">
+			     <h4>Jackpots<br>
+			      <span> $3,977,353</span></h4>
+			    </div>
+			    <!--text01 -->
+			    <!--text02 -->
+			    <div class="text02">
+			      <h4>Players online <span>7,246</span></h4>
+			    </div>
+			    <!--text02 -->
+			   <!--navogarion -->
+			    <div class="navigation">
+			      <table>
+			        <tbody>
+			          <tr>
+			            <td class="home"><a href="javascript:;">PLAY ONLINE LOTTERY ON WWW.PLAYINDIALOTTERY.COM : 09555999608</a></td>  
+			          </tr>
+			      </tbody></table>
+			    </div>
+			   <!--navogarion -->
+			   <div class="left_reb"><img alt="" src="/images/left_reb.png"></div>
+			   <div class="right_reb"><img alt="" src="/images/right_reab.png"></div>
+			  </div>
 			</div>
-
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">
-					<li><a href="{{ url('/') }}">Home</a></li>
-				</ul>
-
-				<ul class="nav navbar-nav navbar-right">
-					@if (Auth::guest())
-						<li><a href="{{ url('/auth/login') }}">Login</a></li>
-						<li><a href="{{ url('/auth/register') }}">Register</a></li>
-					@else
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="{{ url('/auth/logout') }}">Logout</a></li>
-							</ul>
-						</li>
-					@endif
-				</ul>
-			</div>
+	    <!--topsection -->
+        	@yield('content')
+		<!-- Scripts -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script> -->
 		</div>
-	</nav>
-
-	@yield('content')
-
-	<!-- Scripts -->
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
-</body>
+	</body>
 </html>

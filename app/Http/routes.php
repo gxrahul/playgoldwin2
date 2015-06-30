@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index'); /* Comment */
+Route::get('/', 'HomeController@index'); /* Comment */
 
 Route::get('/admin', function() {
 	return redirect("admin/lotteries/winning");
