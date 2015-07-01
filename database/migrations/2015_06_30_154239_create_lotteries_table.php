@@ -14,7 +14,9 @@ class CreateLotteriesTable extends Migration {
 	{
 		Schema::create('lotteries', function(Blueprint $table)
 		{
-			$table->increments('id');
+			$table->bigIncrements('id');
+			$table->string('name', 200);
+			$table->string('draw_time', 4)->unique();
 			$table->timestamps();
 		});
 	}

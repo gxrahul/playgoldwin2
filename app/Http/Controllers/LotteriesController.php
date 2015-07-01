@@ -34,7 +34,8 @@ class LotteriesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store_lotteries(Request $request)
+
+	public function store_lotteries( Lottery $lottery, Request $request)
 	{
 		$this->validate($request, $this->rules);
         $input = Input::all();
@@ -55,9 +56,27 @@ class LotteriesController extends Controller {
 
         // dd($input);
 
-        Lottery::create( $input );
-     
-        return view('lotteries.manage')->with('message', 'Lottery data created');
+        if( !empty($input['id']) ) {
+
+        	$lottery = Lottery::find($input['id']);
+        	$input = Input::all();
+
+        	$time = $input['hh'] . $input['mm'];
+
+	        $input['draw_time'] = $time;
+
+	        unset($input['hh']);
+	        unset($input['mm']);
+	        unset($input['_token']); 
+
+	        $lottery->update($input);
+
+        }
+    	else{
+    		Lottery::create( $input );
+    	}
+     	$lotteries = Lottery::all();
+        return view('lotteries.manage', compact('lotteries'));
 	}
 
 	/**
@@ -65,20 +84,25 @@ class LotteriesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function update_lottery( $lottery_id )
+	public function update_lottery( Request $request, $lottery_id )
 	{
-		// update single lottery data
+		
 	}
 
-	public function destroy_lottery( $lottery_id ) {
-		// delete lottery
+	public function destroy_lottery( Lottery $lottery, $lottery_id ) {
+
+		$lottery = Lottery::find($lottery_id);
+
+		$lottery->delete();
+		$lotteries = Lottery::all();
+		return view('lotteries.manage', compact('lotteries'));
 	}
 
 
 	///////// winning lottery controller functions
 
 	public function index_winning() {
-		//list all lotteries 
+		return view('lotteries.winning');
 	}
 
 	public function show_winning( $lottery_id ) {

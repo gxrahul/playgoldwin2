@@ -24,6 +24,7 @@ Route::group(['prefix' => 'admin/lotteries', 'middleware' => ['auth']], function
 	Route::post('winning/{lottery_id}', 'LotteriesController@store_winning');
 
 	Route::get('manage', 'LotteriesController@show_lotteries');
+	Route::get('manage/delete/{lottery_id}', 'LotteriesController@destroy_lottery');
 	Route::post('manage', 'LotteriesController@store_lotteries');
 	Route::post('manage/{lottery_id}', 'LotteriesController@update_lottery');
 	Route::delete('manage/{lottery_id}', 'LotteriesController@destroy_lottery');
