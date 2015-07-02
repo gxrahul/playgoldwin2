@@ -12,10 +12,15 @@
 }
 
 .section03 .title_section {
-  background: #A10309;
+  background: #E7CF75;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 10px;
+  margin-bottom: 30px;
+}
+
+.login .section03 .title_section {
+  background: none; 
 }
 
 .section03 .title_section h3 {
@@ -138,13 +143,9 @@ span.bgamename {
   text-align: center;
 }
 
-.section03 .title_section {
-  background: #E7CF75;
-}
-
 .panel {
   margin-bottom: 20px;
-  /*background-color: #E7CF75;*/
+  background-color: #E7CF75;
   border: 1px solid transparent;
   border-radius: 4px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -174,6 +175,7 @@ table.data-table {
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   margin-bottom: 5px;
   margin-top: 5px;
+  margin-left: 10px;
 }
 
 .btn {
@@ -212,13 +214,13 @@ table.data-table {
 }
 
 button.btn.btn-primary.save {
-  width: 70%;
-  margin-left: 22px;
+  width: 86%;
+  margin-left: 10px;
 }
 
-button.btn.btn-primary.edit {
+.btn.btn-primary.edit {
   margin-right: 5px !important;
-  padding: 6px 20px;
+  padding: 6px 30px;
 }
 
 .btn:hover, .btn:focus, .btn.focus {
@@ -233,4 +235,67 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 
 button, select {
   text-transform: none;
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+.form-horizontal .form-group {
+  display: inline-block;
+  width: 880px;
+  padding: 5px;
+}
+
+.form-horizontal .control-label {
+  text-align: right;
+  margin-bottom: 0;
+  padding-top: 7px;
+}
+
+.panel-default > .panel-heading {
+  color: #fff;
+  background-color: #CBA044;
+  border-color: #97060A;
+  padding: 15px 15px;
+}
+
+.panel-body {
+  padding: 15px;
+}
+
+.form-label {
+  width: 356px;
+  float: left;
+  margin-top: 12px;
+  text-align: right;
+}
+
+.form-txt {
+  width: 465px;
+  float: left;
+}
+
+.col-md-6.col-md-offset-4 {
+  width: 512px;
+  float: right;
+}
+
+ .sub_section02.winning {
+  width: 1140px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 80px;
+  margin-bottom: 120px;
+}
+
+.winning .tournament_list thead th {
+  padding: 3px !important;
+}
+
+.winning .form-control {
+  width: 76%;
+  margin-left: 0;
+  text-align: center;
 }
