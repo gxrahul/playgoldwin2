@@ -46,7 +46,7 @@
 										padding: 10px 10px;
 										text-decoration: none;
 										color: #fff;
-										font-weight: bold;" href="result.html">Click</a>
+										font-weight: bold;" href="javascript:;">Click</a>
 									</td>
 									<td id="time_to_draw">--:--</td>
 								</tr>

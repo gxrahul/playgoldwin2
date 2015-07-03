@@ -16,3 +16,11 @@
 		<!--navogarion -->
 	</div>
 </div>
+<style type="text/css">
+	#wrapper{
+		min-height: 0px !important;
+	}
+	#contentarea_1{
+		min-height: 350px !important;
+	}
+</style>
