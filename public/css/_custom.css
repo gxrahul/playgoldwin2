@@ -12,10 +12,15 @@
 }
 
 .section03 .title_section {
-  background: #A10309;
+  background: #E7CF75;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 10px;
+  margin-bottom: 30px;
+}
+
+.login .section03 .title_section {
+  background: none; 
 }
 
 .section03 .title_section h3 {
@@ -70,40 +75,10 @@ table.top_list tbody {
 	height: 25px;
 }
 
-.sub_section02 .sorted_display table.tournament_list thead th {
-  text-align: center;
-  border-left: 1px solid #FFF;
-  padding: 0px 10px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.sub_section02 .sorted_display table.tournament_list thead th:first-child{
-  border-left: 0;
-}
-
 .sub_section02 .sorted_display table.tournament_list tbody td {
 	border-right: 1px solid #777;
-  border-bottom: 0;
-  border-left: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.sub_section02 .sorted_display table.tournament_list tbody td:last-child {
-  border-right: 0;
-}
-
-.sub_section02 .sorted_display table.tournament_list > tbody > tr > td {
   border-bottom: 1px solid #777;
   border-left: 1px solid #777;
-  padding: 0;
-}
-
-.sub_section02 .sorted_display table.tournament_list > tbody > tr > td:last-child {
-  border-right: 1px solid #777;
 }
 
 input#bt_login {
@@ -168,20 +143,14 @@ span.bgamename {
   text-align: center;
 }
 
-.footer_section .footersection-top {
-  height: 145px !important;
+.panel {
+  margin-bottom: 20px;
+  background-color: #E7CF75;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
-.footersection-top .footertop_inner {
-  height : auto !important;
-}
-.footer_section_bottom{
-  width: auto !important;
-  background: none transparent !important;
-  margin-left: 292px;
-}
-
-/********  form styling *********/
 table.data-table {
   width: 100%;
 }
@@ -317,7 +286,7 @@ button, select {
   height: auto;
   margin: 0 auto;
   position: relative;
-  margin-top: 10px;
+  margin-top: 80px;
   margin-bottom: 120px;
 }
 
@@ -329,10 +298,4 @@ button, select {
   width: 76%;
   margin-left: 0;
   text-align: center;
-}
-
-a.btn.btn-danger {
-  background-color: orangered;
-  text-decoration: none;
-  color: #FFF;
 }

@@ -20,6 +20,7 @@ Route::get('/admin', function() {
 Route::group(['prefix' => 'admin/lotteries', 'middleware' => ['auth']], function() {
 
 	Route::get('winning', 'LotteriesController@index_winning');
+	Route::post('winning', 'LotteriesController@store_winning');
 	Route::get('winning/{lottery_id}', 'LotteriesController@show_winning');
 	Route::post('winning/{lottery_id}', 'LotteriesController@store_winning');
 

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class series extends Model {
+class Series extends Model {
 
 	//
 

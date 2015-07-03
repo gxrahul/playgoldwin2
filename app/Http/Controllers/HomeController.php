@@ -1,5 +1,12 @@
 <?php namespace App\Http\Controllers;
 
+use App\Lottery;
+use App\Series;
+Use App\Result;
+
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+
 class HomeController extends Controller {
 
 	/*
@@ -31,7 +38,17 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('home');
+		// get lottery to display
+		$time = date("Hi");
+		$next_draw_lottery = Lottery::where( "draw_time", '>', $time )->orderBy( "draw_time" )->first();
+		$next_draw_time = date_create_from_format("Hi", $next_draw_lottery->draw_time);
+		$next_draw_time = $next_draw_time->format("h:i A");
+		$lottery = Lottery::where( "draw_time", '<', $time )->orderBy( "draw_time", "desc" )->first();
+		$series = Series::all();
+		$date = date('Y-m-d');
+		$results = Result::where( array( "date" => $date, 'lottery_id' => $lottery->id ) )->with('series')->get();
+		// dd($results->first()->series->code);
+		return view('home', compact('results', 'lottery', 'series', 'next_draw_time'));
 	}
 
 }

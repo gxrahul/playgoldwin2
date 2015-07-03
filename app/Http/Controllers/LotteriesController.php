@@ -4,6 +4,8 @@ use Input;
 use Redirect;
 
 use App\Lottery;
+use App\Series;
+Use App\Result;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -26,7 +28,8 @@ class LotteriesController extends Controller {
 
 	public function show_lotteries() {
 		$lotteries = Lottery::all();
-		return view('lotteries.manage', compact('lotteries'));		
+		$is_admin = true;
+		return view('lotteries.manage', compact('lotteries', 'is_admin'));
 	}
 
 	/**
@@ -76,7 +79,8 @@ class LotteriesController extends Controller {
     		Lottery::create( $input );
     	}
      	$lotteries = Lottery::all();
-        return view('lotteries.manage', compact('lotteries'));
+     	$is_admin = true;
+        return view('lotteries.manage', compact('lotteries', 'is_admin'));
 	}
 
 	/**
@@ -95,22 +99,73 @@ class LotteriesController extends Controller {
 
 		$lottery->delete();
 		$lotteries = Lottery::all();
-		return view('lotteries.manage', compact('lotteries'));
+		$is_admin = true;
+		return view('lotteries.manage', compact('lotteries', 'is_admin'));
 	}
 
 
 	///////// winning lottery controller functions
 
 	public function index_winning() {
-		return view('lotteries.winning');
+		$lotteries = Lottery::all();
+		$series = Series::all();
+		$_results = Result::where(array('date'=>date('Y-m-d')))->get();
+		$results_multi = array();
+		foreach( $_results as $result ) {
+			if( empty( $results_multi["{$result->lottery_id}"] ) ) {
+				$results_multi["{$result->lottery_id}"] = array();
+			}
+			$results_multi["{$result->lottery_id}"]["{$result->series_id}"] = $result->winning_number;
+		}
+		$is_admin = true;
+		return view('lotteries.winning', compact('lotteries', 'series', 'results_multi', 'is_admin'));
 	}
 
 	public function show_winning( $lottery_id ) {
 		//show winning page for a single lottery, with form to update/save winning numbers for current date
 	}
 
-	public function store_winning( $lottery_id ) {
+	public function store_winning( Request $request ) {
 		//save winning numbers for $lottery_id for current date
+		$input = Input::all();
+		$date = date('Y-m-d');
+
+		$lottery_id = (int) $input['lottery_id'];
+
+		// dd(count($results));
+
+		$series = $input['series'];
+
+		// dd($series);
+
+		$ctr = 0;
+		foreach ( $series as $series_id => $win_no ) {
+
+			$series_id = (int) $series_id;
+			//check if entry already created for this date and lottery id
+			$result = Result::where(array( 'series_id'=>$series_id, 'lottery_id'=>$lottery_id, 'date'=>$date))->get();
+			// dd(count($result));
+			if( count( $result ) ) {
+
+				$result = $result[0];
+				$result->winning_number = $win_no;
+
+			} else {
+			
+				$result = new Result(array(
+					'date' => $date,
+					'lottery_id' => $lottery_id,
+					'series_id' => $series_id,
+					'winning_number' => $win_no
+				));
+			}
+
+			$rsp = $result->save();
+			// $rsp ? ($ctr++) : '';
+		}
+
+		return Redirect::to('/admin/lotteries/winning');
+
 	}
 
 	public function update_winning( $lottery_id ) {
