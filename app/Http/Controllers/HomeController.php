@@ -54,7 +54,7 @@ class HomeController extends Controller {
 			$next_draw_time = "--:--";
 		}
 		
-		$lottery = Lottery::where( "draw_time", '<', $time )->orderBy( "draw_time", "desc" )->first();
+		$lottery = Lottery::where( "draw_time", '<=', $time )->orderBy( "draw_time", "desc" )->first();
 		
 		$date = date('Y-m-d');
 		$results = Result::where( array( "date" => $date, 'lottery_id' => $lottery->id ) )->with('series')->get();
