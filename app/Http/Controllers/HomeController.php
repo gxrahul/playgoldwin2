@@ -1,5 +1,8 @@
 <?php namespace App\Http\Controllers;
 
+use Auth;
+use Redirect;
+
 use App\Lottery;
 use App\Series;
 Use App\Result;
@@ -57,6 +60,11 @@ class HomeController extends Controller {
 		$results = Result::where( array( "date" => $date, 'lottery_id' => $lottery->id ) )->with('series')->get();
 		// dd($results->first()->series->code);
 		return view('home', compact('results', 'lottery', 'series', 'next_draw_time'));
+	}
+
+	public function doLogout() {
+		Auth::logout(); // log the user out of our application
+		return Redirect::to('auth/login'); // redirect the user to the login screen
 	}
 
 }

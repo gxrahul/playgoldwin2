@@ -8,6 +8,7 @@
 						<td class="home"><a href="/" target="_blank">Site Home</a></td>
 						<td class="getting_started"><a href="/admin/lotteries/winning">Update Result</a></td>
 						<td class="getting_started"><a href="/admin/lotteries/manage">Manage Lotteries</a></td>
+						<td class="home"><a href="/logout">Logout</a></td>
 					</tr>
 				</tbody>
 			</table>

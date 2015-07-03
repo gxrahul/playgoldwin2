@@ -13,6 +13,8 @@
 
 Route::get('/', 'HomeController@index'); /* Comment */
 
+Route::get('logout', array('uses' => 'HomeController@doLogout'));
+
 Route::get('/admin', function() {
 	return redirect("admin/lotteries/winning");
 });
