@@ -48,7 +48,7 @@
 										color: #fff;
 										font-weight: bold;" href="result.html">Click</a>
 									</td>
-									<td id="time_to_draw"></td>
+									<td id="time_to_draw">--:--</td>
 								</tr>
 							</tbody>
 						</table>
@@ -135,8 +135,12 @@
 
 		$('#current_time').html(moment().format('h:mm:ss A'));
 		
-		var next_draw_time = moment( $("#next_draw_time").html(), "hh:mm A" );
-		
+		var next_draw_time_str = $("#next_draw_time").html();
+		if( next_draw_time_str === '--:--' ) {
+			return;
+		}
+		var next_draw_time = moment( next_draw_time_str, "hh:mm A" );
+
 		var time_to_draw = next_draw_time.diff( moment() );
 		if( time_to_draw <= 0 ) {
 			window.location.reload();
@@ -147,6 +151,7 @@
 		console.log("time_to_draw", time_to_draw_duration);
 
 		$('#time_to_draw').html( time_to_draw_duration.hours() + ":" + time_to_draw_duration.minutes() + ":" + time_to_draw_duration.seconds() );
+
 	}
 
 	setInterval(update, 1000);
