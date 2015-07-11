@@ -99,7 +99,7 @@
 							<tbody>
 								@foreach( $results as $result)
 									<tr class="odd">
-										<td><span id="lbl_g1"><span class="ugamename">PLAYGOLDWIN {{$result->series->code}}</span> <br><span class="bgamename">{{$lottery->name}}</span></span></td>
+										<td><span id="lbl_g1"><span class="ugamename">GOODLUCK 1000 {{$result->series->code}}</span> <br><span class="bgamename">{{$lottery->name}}</span></span></td>
 										<td>{{$result->series->code}}</td>
 										<td>100</td>
 										<td><input type="text" onkeyup="TableOperations ('Text00');" class="input-num" id="Text00" maxlength="3" name="Text00"></td>
