@@ -45,7 +45,7 @@
 				<div class="footertop_inner">
 					<div class="footer_section_bottom">
 						<div class="foot-txt">
-							<p>Purchase of lottery using this website is strictly prohibited in the states where lotteries are banned. You must be above 18 years to play Online Lottery.</p>
+							<p>Purchase of lottery using this website is strictly prohibited in the states where lotteries are banned. You must be above 18 years to play Online Game.</p>
 						</div>
 						<div class="clr"></div>
 					</div><img class="karoshape" alt="" src="/images/karo.png">

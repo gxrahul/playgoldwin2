@@ -46,7 +46,7 @@
 										padding: 10px 10px;
 										text-decoration: none;
 										color: #fff;
-										font-weight: bold;" href="/result">Click</a>
+										font-weight: bold;" target="_blank" href="/result">Click</a>
 									</td>
 									<td id="time_to_draw">--:--</td>
 								</tr>
@@ -130,7 +130,7 @@
 				<div class="stepsbox">
 					<div class="box01">
 						<div class="number"><img alt="" src="images/number01.png"></div>
-						<p><strong>Buy lottery tickets</strong><br>from your LOCAL VENDOR</p>
+						<p><strong>Buy</strong><br>from your LOCAL VENDOR</p>
 
 					</div>
 					<div class="box02">

@@ -13,7 +13,7 @@
 		<!--text01 -->
 		<!--text02 -->
 		<div class="text02">
-			<h4>Players online <span>7,246</span></h4>
+			<h4>Players online <span><?php echo number_format(mt_rand(1000, 20000))?></span></h4>
 		</div>
 		<!--text02 -->
 		<!--navogarion -->
