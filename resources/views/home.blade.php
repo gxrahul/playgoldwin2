@@ -46,7 +46,7 @@
 										padding: 10px 10px;
 										text-decoration: none;
 										color: #fff;
-										font-weight: bold;" href="javascript:;">Click</a>
+										font-weight: bold;" href="/result">Click</a>
 									</td>
 									<td id="time_to_draw">--:--</td>
 								</tr>
@@ -76,7 +76,24 @@
 									<th>9</th>
 									<th>Qty.</th>
 									<th>Amount</th>
-									<th>12:20 PM</th>
+									<?php
+										$hh = substr($lottery->draw_time, 0, 2);
+										$mm = substr($lottery->draw_time, 2, 5);
+
+										$hh_int = intval( $hh, 10 );
+
+										$ampm = "AM";
+										if( $hh_int >= 12 ) {
+											$ampm = "PM";
+											if( $hh_int > 12 ) {
+												$hh -= 12;
+												$hh = $hh < 9 ? "0$hh" : $hh;
+											}
+										} else if( $hh_int === 0 ) {
+												$hh = 12;
+										}
+									?>
+									<th>{{$hh}}:{{$mm}} {{$ampm}}</th>
 								</tr>
 							</thead>  
 							<tbody>

@@ -87,7 +87,7 @@ font-style: normal;
 }
 
 /*========wrapper start================*/
-#wrapper{ width:100%; background:url(../images/main_bg01.jpg) no-repeat top center; min-height:1650px; overflow:hidden}
+#wrapper{ width:100%; background:url(../images/main_bg01.jpg) no-repeat top center; min-height:800px; overflow:hidden}
 /*========wrapper end================*/
 
 /*=========to section start================*/

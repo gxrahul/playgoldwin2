@@ -23,9 +23,26 @@
 												<?php 
 													$hh = substr($lottery->draw_time, 0, 2);
 													$mm = substr($lottery->draw_time, 2, 5);
+
+													$hh_int = intval( $hh, 10 );
+
+													$ampm = "AM";
+													if( $hh_int >= 12 ) {
+														$ampm = "PM";
+														if( $hh_int > 12 ) {
+															$hh -= 12;
+															$hh = $hh < 9 ? "0$hh" : $hh;
+														}
+													} else if( $hh_int === 0 ) {
+															$hh = 12;
+													}													
 												?>
-												<input pattern="[0-9]*" min="0" max="23" step="1" type="number" class="form-control" style="width: 15%;" placeholder="HH" name="hh" value="{{ $hh }}">
+												<input pattern="[0-9]*" min="1" max="12" step="1" type="number" class="form-control" style="width: 15%;" placeholder="HH" name="hh" value="{{ $hh }}">
 												: <input pattern="[0-9]*" min="0" max="59" step="1" type="number" class="form-control" style="width: 15%;margin-left:0;" placeholder="MM" name="mm" value="{{ $mm }}">
+												: <select class="form-control" style="width: 22%;margin-left:0;" name="ampm" value="{{ $ampm }}">
+													<option value="AM" @if($ampm === 'AM') selected="selected" @endif>AM</option>
+													<option value="PM" @if($ampm === 'PM') selected="selected" @endif>PM</option>
+													</select>
 											</td>
 											<td class="col-md-3"  style="text-align: center;width:30%">
 												<input type="hidden" name="id" value="{{ $lottery->id }}">
@@ -48,8 +65,12 @@
 											<input type="text" class="form-control" name="name" value="">
 										</td>
 										<td style="text-align: center;width:30%">
-												<input min="0" max="23" step="1" type="number" class="form-control" style="width: 15%;" placeholder="HH" name="hh" value="00">
+												<input min="1" max="12" step="1" type="number" class="form-control" style="width: 15%;" placeholder="HH" name="hh" value="00">
 												: <input min="0" max="59" step="1" type="number" class="form-control" style="width: 15%;margin-left:0;" placeholder="MM" name="mm" value="00">
+												: <select class="form-control" style="width: 22%;margin-left:0;" name="ampm" value="{{ $ampm }}">
+													<option value="AM">AM</option>
+													<option value="PM">PM</option>
+												</select>
 										</td>
 										<td style="text-align: center;width:30%">
 											<input type="hidden" name="_token" value="{{ csrf_token() }}">

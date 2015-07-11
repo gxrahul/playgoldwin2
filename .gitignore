@@ -1,3 +1,5 @@
 /vendor
 /node_modules
 .env
+/PlayGoldWin.sublime-project
+/PlayGoldWin.sublime-workspace

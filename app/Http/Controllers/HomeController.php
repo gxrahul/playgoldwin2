@@ -67,4 +67,36 @@ class HomeController extends Controller {
 		return Redirect::to('auth/login'); // redirect the user to the login screen
 	}
 
+	public function showresult( $date = '' ) {
+
+		if( empty( $date ) ) {
+			$date = date_create('now');
+		} else {
+			$date = date_create_from_format( 'Y-m-d', $date );
+		}
+
+		$date->setTime(0,0,0);
+
+		$datestr = $date->format('Y-m-d');
+
+		$_results = Result::where( array( "date" => $date ) )->with('lottery')->with('series')->orderBy('lottery_id')->orderBy('series_id')->get();
+
+		// dd($results[0]);
+
+		$results = array();
+		if( count( $_results ) > 0 ) {
+			foreach ( $_results as $_result ) {
+				if( empty( $results["{$_result->lottery->draw_time}"] ) ) {
+					$results["{$_result->lottery->draw_time}"] = array();
+				}
+				$results["{$_result->lottery->draw_time}"]["{$_result->series->code}"] = $_result->winning_number;
+			}
+		}
+
+		$series = Series::all();
+
+		return view('results', compact( 'results', 'series', 'datestr' ));
+
+	}
+
 }

@@ -6,8 +6,8 @@
 		<!--main_ligo -->
 		<!--text01 -->
 		<div class="text01">
-			<h4>LOTTERY JACKPOT<br>
-				<span> Rs. 5,9999</span>
+			<h4>GOODLUCK JACKPOT<br>
+				<span> Rs. 1,00,000</span>
 			</h4>
 		</div>
 		<!--text01 -->
@@ -21,7 +21,7 @@
 			<table>
 				<tbody>
 					<tr>
-						<td class="home"><a href="javascript:;">PLAY ONLINE LOTTERY ON <span style="color:#f1d16b;">WWW.PLAYINDIALOTTERY.COM</span> : 09555999608</a></td>  
+						<td class="home"><a href="javascript:;">PLAY ONLINE Goodluck1000<!-- ON <span style="color:#f1d16b;">WWW.PLAYINDIALOTTERY.COM</span> --> : +91 9898989898</a></td>
 					</tr>
 				</tbody>
 			</table>

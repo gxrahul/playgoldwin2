@@ -32,11 +32,24 @@
 													<span class="ugamename">{{$lottery->name}}</span>
 												</td>
 												<td align="center" style="width:66px">
-													<?php 
+													<?php
 														$hh = substr($lottery->draw_time, 0, 2);
 														$mm = substr($lottery->draw_time, 2, 5);
+
+														$hh_int = intval( $hh, 10 );
+
+														$ampm = "AM";
+														if( $hh_int >= 12 ) {
+															$ampm = "PM";
+															if( $hh_int > 12 ) {
+																$hh -= 12;
+																$hh = $hh < 9 ? "0$hh" : $hh;
+															}
+														} else if( $hh_int === 0 ) {
+																$hh = 12;
+														}
 													?>
-													<span class="ugamename">{{$hh}}:{{$mm}}</span>
+													<span class="ugamename">{{$hh}}:{{$mm}} {{$ampm}}</span>
 												</td>
 												<?php $ctr=10; ?>
 												<?php $result = empty( $results_multi["{$lottery->id}"] ) ? '' : $results_multi["{$lottery->id}"]; ?>

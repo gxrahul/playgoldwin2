@@ -21,10 +21,10 @@ class LotteriesController extends Controller {
 	 */
 
 	protected $rules = [
-        'name' => ['required'],
-        'hh' => ['required'],
-        'mm' => ['required'],
-    ];
+		'name' => ['required'],
+		'hh' => ['required'],
+		'mm' => ['required'],
+	];
 
 	public function show_lotteries() {
 		$lotteries = Lottery::all();
@@ -41,46 +41,44 @@ class LotteriesController extends Controller {
 	public function store_lotteries( Lottery $lottery, Request $request)
 	{
 		$this->validate($request, $this->rules);
-        $input = Input::all();
-        if($input['hh'] < 10 ){
-        	$input['hh'] = "0". $input['hh']; 
-        }
+		$input = Input::all();
 
-        if($input['mm'] < 10){
-        	$input['mm'] = "0". $input['mm']; 
-        }
+		if( strlen( $input['hh'] ) === 1 && intval( $input['hh'] ) < 10 ) {
+			$input['hh'] = "0". $input['hh']; 
+		}
 
-        $time = $input['hh'] . $input['mm'];
+		if( strlen( $input['mm'] ) === 1 && intval( $input['mm'] ) < 10 ) {
+			$input['mm'] = "0". $input['mm']; 
+		}
 
-        $input['draw_time'] = $time;
+		if( $input['ampm'] === 'PM' && intval( $input['hh'] ) >= 1 && intval( $input['hh'] ) < 12 ) {
+			$input['hh'] = intval( $input['hh'] ) + 12;
+		} else if( $input['ampm'] === 'AM' && intval( $input['hh'] ) === 12 ) {
+			$input['hh'] = '00';
+		}
 
-        unset($input['hh']);
-        unset($input['mm']);
+		$time = $input['hh'] . $input['mm'];
 
-        // dd($input);
+		$input['draw_time'] = $time;
 
-        if( !empty($input['id']) ) {
+		// dd($input);
 
-        	$lottery = Lottery::find($input['id']);
-        	$input = Input::all();
+		if( !empty($input['id']) ) {
+			$lottery = Lottery::find( (int) $input['id'] );
+		}
+		else{
+			$lottery = new Lottery;
+		}
 
-        	$time = $input['hh'] . $input['mm'];
+		$lottery->name = $input['name'];
 
-	        $input['draw_time'] = $time;
+		$lottery->draw_time = $time;
 
-	        unset($input['hh']);
-	        unset($input['mm']);
-	        unset($input['_token']); 
+		$lottery->save();
 
-	        $lottery->update($input);
-
-        }
-    	else{
-    		Lottery::create( $input );
-    	}
-     	$lotteries = Lottery::all();
-     	$is_admin = true;
-        return view('lotteries.manage', compact('lotteries', 'is_admin'));
+		$lotteries = Lottery::all();
+		$is_admin = true;
+		return view('lotteries.manage', compact('lotteries', 'is_admin'));
 	}
 
 	/**

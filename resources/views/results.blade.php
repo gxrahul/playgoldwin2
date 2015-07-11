@@ -9,17 +9,13 @@
 					<table class="top_list">
 						<tbody>
 							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td>Select Date</td>
-								<td><input type="text" id="datepicker"></td>
-								<td><input type="submit" value="Show Result"></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
+								<td colspan="11">
+									<span style="padding-right:10px;">Select Date</span>
+									<input type="text" id="datepicker" value="<?php echo $datestr?>">
+									<span style="padding-left:10px;">
+										<input id="btn_get_result" class="btn btn-danger" type="submit" value="Show Result">
+									</span>
+								</td>
 							</tr>
 						</tbody>
 					</table>
@@ -31,176 +27,42 @@
 						<thead>
 							<tr>
 								<th>Time</th>
-								<th>A</th>
-								<th>B</th>
-								<th>C</th>
-								<th>D</th>
-								<th>E</th>
-								<th>F</th>
-								<th>G</th>
-								<th>H</th>
-								<th>I</th>
-								<th>J</th>
+								@foreach( $series as $serie )
+									<th>{{$serie->code}}</th>
+								@endforeach
 							</tr>
 						</thead>
 						<tbody>
-							<tr class="odd">
-								<td align="center">9:00 AM</td>
-								<td align="center">6010</td>
-								<td align="center">6171</td>
-								<td align="center">6295</td>
-								<td align="center">6346</td>
-								<td align="center">6412</td>
-								<td align="center">6525</td>
-								<td align="center">6682</td>
-								<td align="center">6782</td>
-								<td align="center">6834</td>
-								<td align="center">6958</td>
-							</tr>
-							<tr class="even">
-								<td align="center">9:00 AM</td>
-								<td align="center">6010</td>
-								<td align="center">6171</td>
-								<td align="center">6295</td>
-								<td align="center">6346</td>
-								<td align="center">6412</td>
-								<td align="center">6525</td>
-								<td align="center">6682</td>
-								<td align="center">6782</td>
-								<td align="center">6834</td>
-								<td align="center">6958</td>
-							</tr>
-							<tr class="odd">
-								<td align="center">9:00 AM</td>
-								<td align="center">6010</td>
-								<td align="center">6171</td>
-								<td align="center">6295</td>
-								<td align="center">6346</td>
-								<td align="center">6412</td>
-								<td align="center">6525</td>
-								<td align="center">6682</td>
-								<td align="center">6782</td>
-								<td align="center">6834</td>
-								<td align="center">6958</td>
-							</tr>
-							<tr class="even">
-								<td align="center">9:00 AM</td>
-								<td align="center">6010</td>
-								<td align="center">6171</td>
-								<td align="center">6295</td>
-								<td align="center">6346</td>
-								<td align="center">6412</td>
-								<td align="center">6525</td>
-								<td align="center">6682</td>
-								<td align="center">6782</td>
-								<td align="center">6834</td>
-								<td align="center">6958</td>
-							</tr>
-							<tr class="odd">
-								<td align="center">9:00 AM</td>
-								<td align="center">6010</td>
-								<td align="center">6171</td>
-								<td align="center">6295</td>
-								<td align="center">6346</td>
-								<td align="center">6412</td>
-								<td align="center">6525</td>
-								<td align="center">6682</td>
-								<td align="center">6782</td>
-								<td align="center">6834</td>
-								<td align="center">6958</td>
-							</tr>
-							<tr class="even">
-								<td align="center">9:00 AM</td>
-								<td align="center">6010</td>
-								<td align="center">6171</td>
-								<td align="center">6295</td>
-								<td align="center">6346</td>
-								<td align="center">6412</td>
-								<td align="center">6525</td>
-								<td align="center">6682</td>
-								<td align="center">6782</td>
-								<td align="center">6834</td>
-								<td align="center">6958</td>
-							</tr>
-							<tr class="odd">
-								<td align="center">9:00 AM</td>
-								<td align="center">6010</td>
-								<td align="center">6171</td>
-								<td align="center">6295</td>
-								<td align="center">6346</td>
-								<td align="center">6412</td>
-								<td align="center">6525</td>
-								<td align="center">6682</td>
-								<td align="center">6782</td>
-								<td align="center">6834</td>
-								<td align="center">6958</td>
-							</tr>
-							<tr class="even">
-								<td align="center">9:00 AM</td>
-								<td align="center">6010</td>
-								<td align="center">6171</td>
-								<td align="center">6295</td>
-								<td align="center">6346</td>
-								<td align="center">6412</td>
-								<td align="center">6525</td>
-								<td align="center">6682</td>
-								<td align="center">6782</td>
-								<td align="center">6834</td>
-								<td align="center">6958</td>
-							</tr>
-							<tr class="odd">
-								<td align="center">9:00 AM</td>
-								<td align="center">6010</td>
-								<td align="center">6171</td>
-								<td align="center">6295</td>
-								<td align="center">6346</td>
-								<td align="center">6412</td>
-								<td align="center">6525</td>
-								<td align="center">6682</td>
-								<td align="center">6782</td>
-								<td align="center">6834</td>
-								<td align="center">6958</td>
-							</tr>
-							<tr class="even">
-								<td align="center">9:00 AM</td>
-								<td align="center">6010</td>
-								<td align="center">6171</td>
-								<td align="center">6295</td>
-								<td align="center">6346</td>
-								<td align="center">6412</td>
-								<td align="center">6525</td>
-								<td align="center">6682</td>
-								<td align="center">6782</td>
-								<td align="center">6834</td>
-								<td align="center">6958</td>
-							</tr>
-							<tr class="odd">
-								<td align="center">9:00 AM</td>
-								<td align="center">6010</td>
-								<td align="center">6171</td>
-								<td align="center">6295</td>
-								<td align="center">6346</td>
-								<td align="center">6412</td>
-								<td align="center">6525</td>
-								<td align="center">6682</td>
-								<td align="center">6782</td>
-								<td align="center">6834</td>
-								<td align="center">6958</td>
-							</tr>
-							<tr class="even">
-								<td align="center">9:00 AM</td>
-								<td align="center">6010</td>
-								<td align="center">6171</td>
-								<td align="center">6295</td>
-								<td align="center">6346</td>
-								<td align="center">6412</td>
-								<td align="center">6525</td>
-								<td align="center">6682</td>
-								<td align="center">6782</td>
-								<td align="center">6834</td>
-								<td align="center">6958</td>
-							</tr>
+							<?php $ctr = 0; ?>
+							@if( count( $results ) == 0 )
+								<tr class="odd"><td colspan="11">No Results Found</td></tr>
+							@endif
+							@foreach( $results as $draw_time => $result )
+								<?php 
+									$hh = substr( $draw_time, 0, 2 );
+									$mm = substr( $draw_time, 2, 5 );
 
+									$hh_int = intval( $hh, 10 );
+
+									$ampm = "AM";
+									if( $hh_int >= 12 ) {
+										$ampm = "PM";
+										if( $hh_int > 12 ) {
+											$hh -= 12;
+											$hh = $hh < 9 ? "0$hh" : $hh;
+										}
+									} else if( $hh_int === 0 ) {
+										$hh = 12;
+									}
+								?>
+
+								<tr class="<?php echo (++$ctr)%2 === 0 ? 'even' : 'odd' ?>">
+									<td align="center">{{$hh}}:{{$mm}} {{$ampm}}</td>
+									@foreach( $series as $serie )
+										<td align="center">{{$serie->numbers}}{{ $result[$serie->code] ? $result[$serie->code] : 'XX' }}</td>
+									@endforeach
+								</tr>
+							@endforeach
 						</tbody>
 					</table>
 				</div>
@@ -211,8 +73,8 @@
 <!--red section -->
 	<div class="section_red">
 		<div class="section_red_inner">&nbsp;
-			<img alt="" class="freespin_banner" src="images/cashe-credit-free-banner.png">
-			<img class="karoshape" alt="" src="images/karo.png">
+			<img alt="" class="freespin_banner" src="/images/cashe-credit-free-banner.png">
+			<img class="karoshape" alt="" src="/images/karo.png">
 			<div class="redtext_section">
 				<h3>Start playing - Keep it fun, stay in control</h3>
 				<ul>
@@ -225,4 +87,24 @@
 		</div>
 	</div>
 	<!--red section -->
+
+<script type="text/javascript">
+
+	$(function() {
+
+		$('#datepicker').datepicker({dateFormat: 'yy-mm-dd'});
+
+		$('#btn_get_result').click(function() {
+			var date = $('#datepicker').val();
+			if( date == '' ) {
+				alert('Please select a date');
+			} else {
+				var url = '<?php echo url("/result"); ?>/' + date;
+				window.location.href = url;
+			}
+		});
+	})
+
+</script>
+
 @endsection

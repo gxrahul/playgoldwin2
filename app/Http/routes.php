@@ -11,7 +11,10 @@
 |
 */
 
-Route::get('/', 'HomeController@index'); /* Comment */
+Route::get('/', 'HomeController@index');
+
+Route::get('/result', 'HomeController@showresult');
+Route::get('/result/{date}', 'HomeController@showresult');
 
 Route::get('logout', array('uses' => 'HomeController@doLogout'));
 
