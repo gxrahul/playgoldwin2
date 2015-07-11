@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-		<title>::POWER JACKPOT::</title>
+		<title>::GoodLuck 1000::</title>
 		<link href="/images/favicon.png" type="image/png" rel="icon">
 		<link type="text/css" rel="stylesheet" href="/css/jquery-ui.min.css">
 		<link type="text/css" rel="stylesheet" href="/css/style.css">
