@@ -6,7 +6,7 @@
 		<!--main_ligo -->
 		<!--text01 -->
 		<div class="text01">
-			<h4>GOODLUCK JACKPOT<br>
+			<h4>GOODLUCK<br>
 				<span> Rs. 1,00,000</span>
 			</h4>
 		</div>

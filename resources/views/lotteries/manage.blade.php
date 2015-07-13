@@ -35,7 +35,7 @@
 														}
 													} else if( $hh_int === 0 ) {
 															$hh = 12;
-													}													
+													}
 												?>
 												<input pattern="[0-9]*" min="1" max="12" step="1" type="number" class="form-control" style="width: 15%;" placeholder="HH" name="hh" value="{{ $hh }}">
 												: <input pattern="[0-9]*" min="0" max="59" step="1" type="number" class="form-control" style="width: 15%;margin-left:0;" placeholder="MM" name="mm" value="{{ $mm }}">

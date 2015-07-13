@@ -75,17 +75,30 @@ class HomeController extends Controller {
 			$date = date_create_from_format( 'Y-m-d', $date );
 		}
 
+		//block future date results
+		if( $date > date_create('now') ) {
+			$datestr = $date->format('Y-m-d');
+			$error = 'Future date, Result not declared yet';
+			return view('results', compact('error', 'datestr'));
+		}
+
 		$date->setTime(0,0,0);
 
 		$datestr = $date->format('Y-m-d');
 
-		$_results = Result::where( array( "date" => $date ) )->with('lottery')->with('series')->orderBy('lottery_id')->orderBy('series_id')->get();
+		$current_time = intval( date('Hi') );
+
+		$_results = Result::with('lottery')->with('series')->where( "date", '=', $date )->orderBy('lottery_id')->orderBy('series_id')->get();
 
 		// dd($results[0]);
 
 		$results = array();
+		$time = date("");
 		if( count( $_results ) > 0 ) {
 			foreach ( $_results as $_result ) {
+				if( intval($_result->lottery->draw_time) > $current_time ) {
+					continue;
+				}
 				if( empty( $results["{$_result->lottery->draw_time}"] ) ) {
 					$results["{$_result->lottery->draw_time}"] = array();
 				}
