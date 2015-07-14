@@ -1,4 +1,4 @@
-<div id="topsection" style="height: 74px;margin-bottom: 20px;margin-top: 10px;">
+<div class="clearfix" id="topsection" style="height: 74px;margin-bottom: 20px;margin-top: 10px;">
 	<div class="topsection_inner" style="height:74px;">
 		<!--navogarion -->
 		<div class="navigation" style="bottom:0;">

@@ -1,4 +1,4 @@
-<div id="topsection">
+<div class="clearfix" id="topsection">
 	<div class="topsection_inner">
 		<img class="leaf" alt="" src="/images/leaf.png">
 		<!--main_ligo -->

@@ -1,3 +1,17 @@
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+} 
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+#topsection{
+  margin-bottom: 62px !important;
+}
 .navigation td a {
   font-size: 25px;
   cursor: default;
