@@ -67,7 +67,7 @@ return [
 	|
 	*/
 
-	'encryption' => '',
+	'encryption' => 'tls',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return [
 	|
 	*/
 
-	'username' => env('rahul.ripp3r@gmail.com'),
+	'username' => env('MAIL_USERNAME', 'rahul.ripp3r@gmail.com'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return [
 	|
 	*/
 
-	'password' => env('2RmuQdsoJFoZFGidMH2kLw'),
+	'password' => env('MAIL_PASSWORD', '2RmuQdsoJFoZFGidMH2kLw'),
 
 	/*
 	|--------------------------------------------------------------------------
