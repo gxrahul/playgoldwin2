@@ -22,6 +22,11 @@ Route::get('/admin', function() {
 	return redirect("admin/lotteries/winning");
 });
 
+Route::group([ 'prefix' => '/admin/settings', 'middleware' => ['auth']], function() {
+	Route::get('/', 'UserController@settings');
+	Route::post('/', 'UserController@save_settings');
+});
+
 Route::group(['prefix' => 'admin/lotteries', 'middleware' => ['auth']], function() {
 
 	Route::get('winning', 'LotteriesController@index_winning');
