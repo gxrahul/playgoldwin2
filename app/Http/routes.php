@@ -13,6 +13,10 @@
 
 Route::get('/', 'HomeController@index');
 
+Route::get('/home', function() {
+	return redirect("/");
+});
+
 Route::get('/result', 'HomeController@showresult');
 Route::get('/result/{date}', 'HomeController@showresult');
 
