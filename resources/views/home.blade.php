@@ -57,7 +57,7 @@
 				<div class="sub_section02">
 					<!--tab start -->
 					<div class="sorted_display">
-						<!-- <h4>We have 32 tournaments for you</h4>  -->
+						@if( !empty( $lottery ) )
 						<table class="tournament_list">
 							<thead>
 								<tr>
@@ -119,6 +119,7 @@
 								@endforeach
 							</tbody>
 						</table>
+						@endif
 						<div class="clr"></div>
 					</div>
 					<!--tab end -->
