@@ -10,10 +10,10 @@
 						<div class="title_section" style="padding: 20px;">
 							<table class="data-table">
 								<tbody>
-									@if( !empty( $message ) )
+									@if( session()->has( 'message' ) )
 									<tr>
 										<td colspan="2">
-											<div style="background:#eee;border-radius:4px;color:#333;">{{$message}}</div>
+											<div style="background:#333;border-radius:4px;color:#fff;padding:10px;">{{session( 'message' )}}</div>
 										</td>
 									</tr>
 									@endif
