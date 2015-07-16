@@ -56,8 +56,10 @@ class HomeController extends Controller {
 		
 		$lottery = Lottery::where( "draw_time", '<=', $time )->orderBy( "draw_time", "desc" )->first();
 		
-		$date = date('Y-m-d');
-		$results = Result::where( array( "date" => $date, 'lottery_id' => $lottery->id ) )->with('series')->get();
+		if( $lottery ) {
+			$date = date('Y-m-d');
+			$results = Result::where( array( "date" => $date, 'lottery_id' => $lottery->id ) )->with('series')->get();
+		}
 		// dd($results->first()->series->code);
 		return view('home', compact('results', 'lottery', 'series', 'next_draw_time'));
 	}
