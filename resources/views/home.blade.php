@@ -10,8 +10,8 @@
 						<a href="#"><img src="images/banner_01a.png" alt=""/></a>
 						<a href="#"><img src="images/banner_02.png" alt=""/></a>
 						<a href="#"><img src="images/banner_01a.png" alt=""/></a>
-						<a href="#"><img src="images/banner_04.png" alt=""/></a> 
-						<a href="#"><img src="images/banner_01a.png" alt=""/></a>
+<!-- 						<a href="#"><img src="images/banner_04.png" alt=""/></a> 
+						<a href="#"><img src="images/banner_01a.png" alt=""/></a> -->
 					</div>
 				</div>
 			</div>
