@@ -351,10 +351,13 @@ a.btn.btn-danger {
 	color: #FFF;
 }
 
-@media screen ( max-width : 1000px ) {
+@media ( max-width : 1000px ) {
 
 	#wrapper, .topsection_inner, .section03, .section02 {
-		width: 1000px !important;
+		width: 100% !important;
 	}
 
+	#wrapper {
+		margin: 0 auto;
+	}
 }
