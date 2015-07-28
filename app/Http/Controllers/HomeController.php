@@ -77,14 +77,16 @@ class HomeController extends Controller {
 			$date = date_create_from_format( 'Y-m-d', $date );
 		}
 
+		$date->setTime(0,0,0);
+
+		$today_date = date_create('now')->setTime(0,0,0);
+
 		//block future date results
-		if( $date > date_create('now') ) {
+		if( $date > $today_date ) {
 			$datestr = $date->format('Y-m-d');
 			$error = 'Future date, Result not declared yet';
 			return view('results', compact('error', 'datestr'));
 		}
-
-		$date->setTime(0,0,0);
 
 		$datestr = $date->format('Y-m-d');
 
@@ -98,7 +100,7 @@ class HomeController extends Controller {
 		$time = date("");
 		if( count( $_results ) > 0 ) {
 			foreach ( $_results as $_result ) {
-				if( intval($_result->lottery->draw_time) > $current_time ) {
+				if( $date == $today_date && intval($_result->lottery->draw_time) > $current_time ) {
 					continue;
 				}
 				if( empty( $results["{$_result->lottery->draw_time}"] ) ) {
