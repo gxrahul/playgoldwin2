@@ -1,20 +1,20 @@
 .clearfix:before,
 .clearfix:after {
-    content: "";
-    display: table;
+		content: "";
+		display: table;
 } 
 .clearfix:after {
-    clear: both;
+		clear: both;
 }
 .clearfix {
-    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+		zoom: 1; /* For IE 6/7 (trigger hasLayout) */
 }
 #topsection{
-  margin-bottom: 62px !important;
+	margin-bottom: 62px !important;
 }
 .navigation td a {
-  font-size: 25px;
-  cursor: default;
+	font-size: 25px;
+	cursor: default;
 }
 
 .section03 {
@@ -26,57 +26,57 @@
 }
 
 .section03 .title_section {
-  background: #A10309;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 10px;
+	background: #A10309;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 10px;
 }
 
 .section03 .title_section h3 {
-  color: #ffffff;
-  font: normal 26px/36px 'Conv_PTsans';
-  padding: 2px 10px;
-  text-align: center;
-  margin-bottom: 10px;
+	color: #ffffff;
+	font: normal 26px/36px 'Conv_PTsans';
+	padding: 2px 10px;
+	text-align: center;
+	margin-bottom: 10px;
 }
 
 .table-top .top_list {
-  width: 100%;
+	width: 100%;
 }
 
 .result .table-top .top_list {
-  width: 100%;
-  border-top: 1px solid #e51319;
-  border-left: 1px solid #e51319;
-  border-right: 1px solid #e51319;
-  background-color: #b6873a;
+	width: 100%;
+	border-top: 1px solid #e51319;
+	border-left: 1px solid #e51319;
+	border-right: 1px solid #e51319;
+	background-color: #b6873a;
 }
 
 table.top_list thead {
-  text-align: center;
+	text-align: center;
 }
 
 table.top_list tbody {
-  text-align: center;
+	text-align: center;
 }
 
 .top_list tr th, .top_list tr td  {
-  padding: 10px;
+	padding: 10px;
 }
 
 .section03 .tournament_list .input-num {
-  width: 38px;
-  height: 25px;
+	width: 38px;
+	height: 25px;
 }
 
 .section03 .Qtytxt {
-  width: 41px;
-  height: 25px;
+	width: 41px;
+	height: 25px;
 }
 
 .section03 .Amnttxt {
-  width: 80px;
-  height: 25px;
+	width: 80px;
+	height: 25px;
 }
 
 .section03 .loginbox {
@@ -85,268 +85,276 @@ table.top_list tbody {
 }
 
 .sub_section02 .sorted_display table.tournament_list thead th {
-  text-align: center;
-  border-left: 1px solid #FFF;
-  padding: 0px 10px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+	text-align: center;
+	border-left: 1px solid #FFF;
+	padding: 0px 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .sub_section02 .sorted_display table.tournament_list thead th:first-child{
-  border-left: 0;
+	border-left: 0;
 }
 
 .sub_section02 .sorted_display table.tournament_list tbody td {
 	border-right: 1px solid #777;
-  border-bottom: 0;
-  border-left: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+	border-bottom: 0;
+	border-left: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .sub_section02 .sorted_display table.tournament_list tbody td:last-child {
-  border-right: 0;
+	border-right: 0;
 }
 
 .sub_section02 .sorted_display table.tournament_list > tbody > tr > td {
-  border-bottom: 1px solid #777;
-  border-left: 1px solid #777;
-  padding: 0;
+	border-bottom: 1px solid #777;
+	border-left: 1px solid #777;
+	padding: 0;
 }
 
 .sub_section02 .sorted_display table.tournament_list > tbody > tr > td:last-child {
-  border-right: 1px solid #777;
+	border-right: 1px solid #777;
 }
 
 input#bt_login {
-  height: 30px; 
+	height: 30px; 
 }
 
 a#bt_jodi {
-  background: url(../images/send-btn01.png) 0 0 no-repeat;
-  width: 98px !important;
-  height: 42px;
-  border: none;
-  font: normal 14px/22px 'PT sans';
-  cursor: pointer;
-  color: #fff;
-  font-weight: 600;
-  font-size: 20px;
-  display: block;
-  text-decoration: none;
-  padding: 10px;
+	background: url(../images/send-btn01.png) 0 0 no-repeat;
+	width: 98px !important;
+	height: 42px;
+	border: none;
+	font: normal 14px/22px 'PT sans';
+	cursor: pointer;
+	color: #fff;
+	font-weight: 600;
+	font-size: 20px;
+	display: block;
+	text-decoration: none;
+	padding: 10px;
 }
 
 .section03.result {
-  margin-top: 52px !important;
-  width: 940px;
+	margin-top: 52px !important;
+	width: 940px;
 }
 
 .table-top {
-  /*border: 1px solid #222;*/
-  /*background-color: #ccc;*/
+	/*border: 1px solid #222;*/
+	/*background-color: #ccc;*/
 }
 
 .top_list input#datepicker {
-  height: 24px;
+	height: 24px;
 }
 
 .top_list input[type="submit"] {
-  padding: 3px;
-  cursor: pointer;
+	padding: 3px;
+	cursor: pointer;
 }
 
 .sub_section02 .sorted_display table.tournament_list tbody td.lot-name {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 24px;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 24px;
 }
 
 span.ugamename {
-  font-size: 20px;
-  line-height: 28px !important;
-  text-align: center;
-  font-weight: bold;
+	font-size: 20px;
+	line-height: 28px !important;
+	text-align: center;
+	font-weight: bold;
 }
 
 span.bgamename {
-  font-weight: 600;
+	font-weight: 600;
 }
 
 .foot-txt {
-  margin-top: 25px;
-  font-size: 15px;
-  padding-bottom: 15px;
-  text-align: center;
+	margin-top: 25px;
+	font-size: 15px;
+	padding-bottom: 15px;
+	text-align: center;
 }
 
 .footer_section .footersection-top {
-  height: 145px !important;
+	height: 145px !important;
 }
 
 .footersection-top .footertop_inner {
-  height : auto !important;
+	height : auto !important;
 }
 .footer_section_bottom{
-  width: auto !important;
-  background: none transparent !important;
-  margin-left: 292px;
+	width: auto !important;
+	background: none transparent !important;
+	margin-left: 292px;
 }
 
 /********  form styling *********/
 table.data-table {
-  width: 100%;
+	width: 100%;
 }
 
 .data-table .form-control {
-  display: inline;
+	display: inline;
 }
 
 .form-control {
-  display: block;
-  width: 90%;
-  height: auto;
-  padding: 6px 6px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #555555;
-  background-color: #ffffff;
-  background-image: none;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  margin-bottom: 5px;
-  margin-top: 5px;
-  margin-left: 10px;
+	display: block;
+	width: 90%;
+	height: auto;
+	padding: 6px 6px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555555;
+	background-color: #ffffff;
+	background-image: none;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	margin-left: 10px;
 }
 
 .btn {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: 300;
-  text-align: center;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  border-radius: 4px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+	display: inline-block;
+	margin-bottom: 0;
+	font-weight: 300;
+	text-align: center;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	border-radius: 4px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-  color: #ffffff;
-  background-color: #286090;
-  border-color: #204d74;
+	color: #ffffff;
+	background-color: #286090;
+	border-color: #204d74;
 }
 
 .btn-primary {
-  color: #ffffff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
-  text-decoration: none;
+	color: #ffffff;
+	background-color: #337ab7;
+	border-color: #2e6da4;
+	text-decoration: none;
 }
 
 button.btn.btn-primary.save {
-  width: 86%;
-  margin-left: 10px;
+	width: 86%;
+	margin-left: 10px;
 }
 
 .btn.btn-primary.edit {
-  margin-right: 5px !important;
-  padding: 6px 30px;
+	margin-right: 5px !important;
+	padding: 6px 30px;
 }
 
 .btn:hover, .btn:focus, .btn.focus {
-  color: #fff;
-  text-decoration: none;
+	color: #fff;
+	text-decoration: none;
 }
 
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer;
+	-webkit-appearance: button;
+	cursor: pointer;
 }
 
 button, select {
-  text-transform: none;
+	text-transform: none;
 }
 
 .form-group {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .form-horizontal .form-group {
-  display: inline-block;
-  width: 880px;
-  padding: 5px;
+	display: inline-block;
+	width: 880px;
+	padding: 5px;
 }
 
 .form-horizontal .control-label {
-  text-align: right;
-  margin-bottom: 0;
-  padding-top: 7px;
+	text-align: right;
+	margin-bottom: 0;
+	padding-top: 7px;
 }
 
 .panel-default > .panel-heading {
-  color: #fff;
-  background-color: #CBA044;
-  border-color: #97060A;
-  padding: 15px 15px;
+	color: #fff;
+	background-color: #CBA044;
+	border-color: #97060A;
+	padding: 15px 15px;
 }
 
 .panel-body {
-  padding: 15px;
+	padding: 15px;
 }
 
 .form-label {
-  width: 356px;
-  float: left;
-  margin-top: 12px;
-  text-align: right;
+	width: 356px;
+	float: left;
+	margin-top: 12px;
+	text-align: right;
 }
 
 .form-txt {
-  width: 465px;
-  float: left;
+	width: 465px;
+	float: left;
 }
 
 .col-md-6.col-md-offset-4 {
-  width: 512px;
-  float: right;
+	width: 512px;
+	float: right;
 }
 
  .sub_section02.winning {
-  width: 1140px;
-  height: auto;
-  margin: 0 auto;
-  position: relative;
-  margin-top: 10px;
-  margin-bottom: 120px;
+	width: 1140px;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 120px;
 }
 
 .winning .tournament_list thead th {
-  padding: 3px !important;
+	padding: 3px !important;
 }
 
 .winning .form-control {
-  width: 76%;
-  margin-left: 0;
-  text-align: center;
+	width: 76%;
+	margin-left: 0;
+	text-align: center;
 }
 
 a.btn.btn-danger {
-  background-color: orangered;
-  text-decoration: none;
-  color: #FFF;
+	background-color: orangered;
+	text-decoration: none;
+	color: #FFF;
+}
+
+@media screen ( max-width : 1000px ) {
+
+	#wrapper, .topsection_inner, .section03, .section02 {
+		width: 1000px !important;
+	}
+
 }
